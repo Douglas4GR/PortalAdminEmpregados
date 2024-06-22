@@ -26,6 +26,18 @@ namespace PortalAdminEmpregados.Controllers
             // aqui estamos retornando um status 200 (OK) e a lista de todos os empregados
         }
 
+        [HttpGet]
+        [Route("{id:guid}")]
+        public IActionResult GetEmpregadoPorId(Guid id)
+        {
+            var empregado = dbContext.Empregados.Find(id);
+            if (empregado is null)
+            {
+                return NotFound();
+            }
+            return Ok(empregado);
+        }
+
         // aqui é necessário a criação de um objeto, que será quem vai receber os dados do empregado, 
         // para isso usamos DTOs (Data Transfer Object), qu transferem de uma camada para outra
         [HttpPost]
