@@ -1,4 +1,4 @@
-﻿namespace PortalAdminEmpregados.Models
+﻿namespace PortalAdminEmpregados.Models.DTO
 {
     public class AddEmpregadoDto
     {

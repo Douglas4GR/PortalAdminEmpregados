@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PortalAdminEmpregados.Data;
-using PortalAdminEmpregados.Models;
+using PortalAdminEmpregados.Models.DTO;
 using PortalAdminEmpregados.Models.Entidades;
 
 namespace PortalAdminEmpregados.Controllers
@@ -26,6 +26,7 @@ namespace PortalAdminEmpregados.Controllers
             // aqui estamos retornando um status 200 (OK) e a lista de todos os empregados
         }
 
+        //retrieve
         [HttpGet]
         [Route("{id:guid}")]
         public IActionResult GetEmpregadoPorId(Guid id)
@@ -59,6 +60,28 @@ namespace PortalAdminEmpregados.Controllers
 
             return Ok(empregadoEntidade);
             // aqui estamos retornando um status 200 (OK) e o empregado que acabamos de adicionar
+        }
+
+        //update
+        [HttpPut]
+        [Route("{id:guid}")]
+        public IActionResult AtualizarEmpregado(Guid id, UpdateEmpregadoDto updateEmpregadoDto)
+        {
+            var empregado = dbContext.Empregados.Find(id);
+            if (empregado is null)
+            {
+                return NotFound();
+            }
+
+            empregado.Nome = updateEmpregadoDto.Nome;
+            empregado.Email = updateEmpregadoDto.Email;
+            empregado.Telefone = updateEmpregadoDto.Telefone;
+            empregado.CPF = updateEmpregadoDto.CPF;
+            empregado.Salario = updateEmpregadoDto.Salario;
+
+            dbContext.SaveChanges();
+
+            return Ok(empregado);
         }
     }
 }
