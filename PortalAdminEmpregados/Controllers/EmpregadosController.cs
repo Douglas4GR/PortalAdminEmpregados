@@ -83,5 +83,21 @@ namespace PortalAdminEmpregados.Controllers
 
             return Ok(empregado);
         }
+
+        [HttpDelete]
+        [Route("{id:guid}")]
+        public IActionResult DeletarEmpregado(Guid id)
+        {
+            var empregado = dbContext.Empregados.Find(id);
+            if (empregado is null)
+            {
+                return NotFound();
+            }
+
+            dbContext.Empregados.Remove(empregado);
+            dbContext.SaveChanges();
+
+            return Ok();
+        }
     }
 }
