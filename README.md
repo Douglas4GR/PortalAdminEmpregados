@@ -1,5 +1,4 @@
 # PortalAdminEmpregados
-## Descrição
 Este projeto é uma API com estrutura simples com apenas uma Entidade e uma Tabela, podendo servir como base para APIs mais complexas.
 Nesse caso específico a estrutura gira em torno de  um sistema de gestão de funcionários de determinada empresa.
 É uma aplicação ASP.NET Core que utiliza o Entity Framework Core para acessar um banco de dados SQL Server.
@@ -11,23 +10,18 @@ Nesse caso específico a estrutura gira em torno de  um sistema de gestão de fu
 >  - SqlServer
 >  - .NET 8
 
-## Instalação
-1. Clone o Repositório
-```
-  git clone https://github.com/seu-usuario/PortalAdminEmpregados.git
-```
-2. Navegue até o diretório do projeto:
-```
-  cd PortalAdminEmpregados
-```
-3. Restaure as dependências do projeto:
-```
-  dotnet restore
-```
-4. Atualize o banco de dados para a última versão de migração:
-```
-  dotnet ef database update
-```
+## Swagger
+![Swagger](image.png)
+### As operações atuais incluem:
+  - Retornar todos os fucionários da tabela
+  - Buscar um funcionário específico pelo Id
+  - Inserir
+  - Editar
+  - Deletar
+
+### E os esquemas:
+  - AddEmpregadoDto
+  - UpdateEmpregadoDto
 
 # Estrutura do Projeto
 ```plaintext
@@ -85,6 +79,24 @@ Nesse caso específico a estrutura gira em torno de  um sistema de gestão de fu
 - `LICENSE`: Licença do projeto.
 - `PortalAdminEmpregados.sln`: Solução do projeto.
 - `README.md`: Este arquivo.
+
+## Instalação
+1. Clone o Repositório
+```
+  git clone https://github.com/seu-usuario/PortalAdminEmpregados.git
+```
+2. Navegue até o diretório do projeto:
+```
+  cd PortalAdminEmpregados
+```
+3. Restaure as dependências do projeto:
+```
+  dotnet restore
+```
+4. Atualize o banco de dados para a última versão de migração:
+```
+  dotnet ef database update
+```
 
 ## Uso
 Para iniciar a aplicação, use o comando:
