@@ -11,7 +11,11 @@ Nesse caso específico a estrutura gira em torno de  um sistema de gestão de fu
 >  - .NET 8
 
 ## Swagger
-![Swagger](image.png)
+
+![Operações](Imagens/Swagger1.png)
+
+![Esquemas](Imagens/Swagger2.png)
+
 ### As operações atuais incluem:
   - Retornar todos os fucionários da tabela
   - Buscar um funcionário específico pelo Id
@@ -48,6 +52,7 @@ Nesse caso específico a estrutura gira em torno de  um sistema de gestão de fu
 │   └── appsettings.json
 ├── .gitattributes
 ├── .gitignore
+├── Imagens
 ├── LICENSE
 ├── PortalAdminEmpregados.sln
 └── README.md
