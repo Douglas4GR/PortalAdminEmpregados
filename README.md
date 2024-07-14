@@ -88,7 +88,7 @@ Nesse caso específico a estrutura gira em torno de  um sistema de gestão de fu
 ## Instalação
 1. Clone o Repositório
 ```
-  git clone https://github.com/seu-usuario/PortalAdminEmpregados.git
+  git clone https://github.com/douglas4GR/PortalAdminEmpregados.git
 ```
 2. Navegue até o diretório do projeto:
 ```
